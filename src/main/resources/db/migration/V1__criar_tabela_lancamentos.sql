@@ -1,0 +1,7 @@
+CREATE TABLE lancamentos (
+	id BIGSERIAL PRIMARY KEY,
+	descricao VARCHAR(100) NOT NULL,
+	valor NUMERIC(10,2) NOT NULL,
+	tipo VARCHAR(7) NOT NULL CHECK (tipo IN ('RECEITA', 'DESPESA')),
+	data DATE NOT NULL
+	);
