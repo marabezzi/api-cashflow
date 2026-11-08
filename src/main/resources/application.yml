@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:8110}
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/fluxocaixa
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5440/fluxocaixa}
     username: postgres
     password: postgres
   jpa:
